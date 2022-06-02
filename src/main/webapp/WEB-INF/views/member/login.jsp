@@ -14,35 +14,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<my:navBar current="insert"></my:navBar>
-	<!-- .container>.row>.col>h1{글 작성} -->
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h1>글 작성</h1>
-				
-				<form action="${appRoot }/board/insert" method="post" enctype="multipart/form-data">
-					<div>
-						<label class="form-label" for="input1">제목</label>
-						<input class="form-control" type="text" name="title" required id="input1" />
-					</div>
-					
-					<div>
-						<label class="form-label" for="textarea1">본문</label>
-						<textarea class="form-control" name="body" id="textarea1" cols="30" rows="10"></textarea>
-					</div>
-					<div>
-						파일
-						<input type="file" name="file" accept="image/*"/>
-					</div>
-					
-					<button class="btn btn-primary">작성</button>
-				</form>
-			</div>
-		</div>
-	</div>
+
+	<my:navBar current="login"></my:navBar>
+	
+	<h1>로그인 </h1>
+	
+	<form action="${appRoot }/login" method="post">
+		아이디 : <input type="text" name="username" /> <br />
+		패스워드 : <input type="password" name="password" /> <br />
+		<input type="checkbox" name="remember-me" id="" /> 자동로그인 <br />
+		<input type="submit" value="로그인" />
+	</form>
+	
 </body>
 </html>
+
+
+
 
 
 
